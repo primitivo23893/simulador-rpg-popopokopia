@@ -8,18 +8,29 @@
 
 config_version=5
 
+[animation]
+
+compatibility/default_parent_skeleton_in_mesh_instance_3d=true
+
 [application]
 
-config/name="Pokemon Popopokopia"
+config/name="Pokomon Popopokopia"
+config/description="Un simulador estratégico de combates por turnos inspirado en los clásicos de GameBoy. Gestiona tus ataques, calcula el daño y vacía la barra de salud de tu rival antes de que él lo haga contigo. Este prototipo demuestra la implementación de máquinas de estados, control de interfaces (UI) y bucles de gameplay en 2D."
+config/version="0.1.0"
+run/main_scene="uid://k3xq1i8egr2i"
 config/features=PackedStringArray("4.6", "GL Compatibility")
 config/icon="res://icon.svg"
 
-[physics]
+[display]
 
-3d/physics_engine="Jolt Physics"
+window/stretch/mode="canvas_items"
 
 [rendering]
 
+textures/canvas_textures/default_texture_filter=0
 rendering_device/driver.windows="d3d12"
 renderer/rendering_method="gl_compatibility"
 renderer/rendering_method.mobile="gl_compatibility"
+textures/vram_compression/import_etc2_astc=true
+2d/snap/snap_2d_transforms_to_pixel=true
+2d/snap/snap_2d_vertices_to_pixel=true

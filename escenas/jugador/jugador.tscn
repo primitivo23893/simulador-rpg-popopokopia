@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://byffvli742s18"]
+
+[ext_resource type="Script" uid="uid://bqb3ack2p13jl" path="res://escenas/jugador/jugador.gd" id="1_8cmsc"]
+[ext_resource type="Texture2D" uid="uid://cysur3g6bj2nt" path="res://assets/pokemons/PokemonsJugador.png" id="1_vquro"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8cmsc"]
+atlas = ExtResource("1_vquro")
+filter_clip = true
+
+[node name="Jugador" type="Node2D" unique_id=906077538]
+script = ExtResource("1_8cmsc")
+
+[node name="Pokomon" type="Sprite2D" parent="." unique_id=2121180837]
+scale = Vector2(4, 4)
+texture = SubResource("AtlasTexture_8cmsc")
+hframes = 30
+vframes = 2
+frame = 45
