@@ -2,9 +2,92 @@
 
 [ext_resource type="Script" uid="uid://cgu3842kfnv1o" path="res://escenas/enemigo/enemigo.gd" id="1_caqhj"]
 [ext_resource type="Texture2D" uid="uid://epkamk6rck67" path="res://assets/pokemons/PokemonsOponentes_1.png" id="1_tntw3"]
+[ext_resource type="Texture2D" uid="uid://drxcegirtfqax" path="res://assets/explotion/L01,R1,C1,Background,visible,Normal,255.png" id="3_e7kc7"]
+[ext_resource type="Texture2D" uid="uid://c8br3cwfvx2a6" path="res://assets/explotion/L02,R1,C1,Layer 2,visible,Normal,255.png" id="4_bvbr3"]
+[ext_resource type="Texture2D" uid="uid://dxtoat1403aru" path="res://assets/explotion/L03,R1,C1,Layer 3,visible,Normal,255.png" id="5_g2w74"]
+[ext_resource type="Texture2D" uid="uid://d1s5u871e52pi" path="res://assets/explotion/L04,R1,C1,Layer 5,visible,Normal,255.png" id="6_jrwpc"]
+[ext_resource type="Texture2D" uid="uid://d4hamgakl3q2b" path="res://assets/explotion/L05,R1,C1,Layer 6,visible,Normal,255.png" id="7_vgxml"]
+[ext_resource type="Texture2D" uid="uid://d1ht22yu3jtx8" path="res://assets/explotion/L06,R1,C1,Layer 7,visible,Normal,255.png" id="8_xw0kt"]
+[ext_resource type="Texture2D" uid="uid://cwrw5t0j5dw60" path="res://assets/explotion/L07,R1,C1,Layer 7,visible,Normal,255.png" id="9_nlqsk"]
+[ext_resource type="Texture2D" uid="uid://b77eoauledbc0" path="res://assets/explotion/L08,R1,C1,Layer 8,visible,Normal,255.png" id="10_evv3t"]
+[ext_resource type="Texture2D" uid="uid://cg207xcfqk01w" path="res://assets/explotion/L09,R1,C1,Layer 9,visible,Normal,255.png" id="11_me0a2"]
+[ext_resource type="Texture2D" uid="uid://5deed5c4lffq" path="res://assets/explotion/L10,R1,C1,Layer 10,visible,Normal,255.png" id="12_ygguf"]
+[ext_resource type="Texture2D" uid="uid://j0q4c2g5f3lc" path="res://assets/explotion/L11,R1,C1,Layer 11,visible,Normal,255.png" id="13_se0p8"]
+[ext_resource type="Texture2D" uid="uid://bfnwo8ofmxjst" path="res://assets/explotion/L12,R1,C1,Layer 12,visible,Normal,255.png" id="14_st7rr"]
+[ext_resource type="Texture2D" uid="uid://tb1noho8v78i" path="res://assets/explotion/L13,R1,C1,Layer 13,visible,Normal,255.png" id="15_w2k0o"]
+[ext_resource type="Texture2D" uid="uid://btq4k2csrmm6x" path="res://assets/explotion/L14,R1,C1,Layer 14,visible,Normal,255.png" id="16_1bmm6"]
+[ext_resource type="Texture2D" uid="uid://c2vy8mj4y31mj" path="res://assets/explotion/L15,R1,C1,Layer 15,visible,Normal,255.png" id="17_r58sc"]
+[ext_resource type="Texture2D" uid="uid://d242h38b1np0r" path="res://assets/explotion/L16,R1,C1,Layer 16,visible,Normal,255.png" id="18_kr3pw"]
+[ext_resource type="Texture2D" uid="uid://cnpjsirsh03aj" path="res://assets/explotion/L17,R1,C1,Layer 17,visible,Normal,255.png" id="19_huqdq"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_7d0p7"]
 atlas = ExtResource("1_tntw3")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_r46xo"]
+spread = 180.0
+initial_velocity_min = 247.31
+initial_velocity_max = 419.34998
+gravity = Vector3(0, 0, 0)
+scale_max = 8.0
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_jirg2"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_e7kc7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_bvbr3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_g2w74")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_jrwpc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_vgxml")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_xw0kt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_nlqsk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_evv3t")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_me0a2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_ygguf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_se0p8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_st7rr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_w2k0o")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_1bmm6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_r58sc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_kr3pw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_huqdq")
+}],
+"loop": false,
+"name": &"explosion",
+"speed": 20.0
+}]
 
 [node name="Enemigo" type="Node2D" unique_id=1959984945]
 script = ExtResource("1_caqhj")
@@ -16,3 +99,18 @@ hframes = 30
 vframes = 4
 frame = 47
 region_rect = Rect2(0, 0, 1711, 229)
+
+[node name="ParticulasGolpe" type="GPUParticles2D" parent="." unique_id=1633105542]
+emitting = false
+amount = 50
+lifetime = 0.5
+one_shot = true
+explosiveness = 1.0
+process_material = SubResource("ParticleProcessMaterial_r46xo")
+
+[node name="AnimacionMuerte" type="AnimatedSprite2D" parent="." unique_id=1715827330]
+visible = false
+sprite_frames = SubResource("SpriteFrames_jirg2")
+animation = &"explosion"
+frame = 16
+frame_progress = 1.0

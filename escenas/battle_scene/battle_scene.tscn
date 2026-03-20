@@ -4,10 +4,33 @@
 [ext_resource type="Script" uid="uid://cr4ry80c8gf0n" path="res://escenas/battle_scene/battle_scene.gd" id="1_wanqa"]
 [ext_resource type="Theme" uid="uid://cgabvpd2vhv1k" path="res://temas/Combate.tres" id="2_v2k3q"]
 [ext_resource type="Texture2D" uid="uid://c6eeqnc25v5lm" path="res://assets/pixelAssetJam2024/basicMeters 64x8/emptyBasicMeter1.png" id="3_m4odr"]
+[ext_resource type="Texture2D" uid="uid://b8qdh7mfs5t4d" path="res://assets/pixelAssetJam2024/emptyBasicBarThick.png" id="5_qwupt"]
 [ext_resource type="PackedScene" uid="uid://byffvli742s18" path="res://escenas/jugador/jugador.tscn" id="5_uj4fr"]
+[ext_resource type="Texture2D" uid="uid://wbbmewq0o8hk" path="res://assets/pixelAssetJam2024/redMeter01.png" id="6_sa8g4"]
 [ext_resource type="Texture2D" uid="uid://bjl8yfpcubmbm" path="res://assets/fondos/fondo.png" id="7_5iewm"]
+[ext_resource type="Texture2D" uid="uid://yh70jm6bkjkg" path="res://assets/pixelAssetJam2024/redMeter02.png" id="7_f18cf"]
+[ext_resource type="Texture2D" uid="uid://u04ws1lb3l6e" path="res://assets/pixelAssetJam2024/redMeter03.png" id="8_v1eud"]
+[ext_resource type="Texture2D" uid="uid://dud06v55da08j" path="res://assets/pixelAssetJam2024/redMeter04.png" id="9_gyqqb"]
+[ext_resource type="Texture2D" uid="uid://7odnu0fjsogm" path="res://assets/pixelAssetJam2024/redMeter05.png" id="10_wne1l"]
+[ext_resource type="Texture2D" uid="uid://bygjd77ow7le" path="res://assets/pixelAssetJam2024/redMeter06.png" id="11_crlsk"]
+[ext_resource type="Texture2D" uid="uid://bmcbnmiljhary" path="res://assets/pixelAssetJam2024/redMeter07.png" id="12_crkct"]
+[ext_resource type="Texture2D" uid="uid://cwo803ye6f1dx" path="res://assets/pixelAssetJam2024/redMeter08.png" id="13_j05l8"]
 [ext_resource type="Script" uid="uid://b2du6sn6ry77w" path="res://escenas/battle_scene/botones/ataque_1.gd" id="14_esnwo"]
+[ext_resource type="Texture2D" uid="uid://cyyk3txma2nt8" path="res://assets/pixelAssetJam2024/redMeter09.png" id="14_ls66c"]
+[ext_resource type="Texture2D" uid="uid://wnsaywhwx5js" path="res://assets/pixelAssetJam2024/redMeter10.png" id="15_d23fb"]
 [ext_resource type="PackedScene" uid="uid://dfy8jf5ivj1l4" path="res://escenas/enemigo/enemigo.tscn" id="15_ue3hc"]
+[ext_resource type="Script" uid="uid://dktl3gjhii2dd" path="res://escenas/battle_scene/ataque_2.gd" id="17_sa8g4"]
+[ext_resource type="Script" uid="uid://bjvplbhk0q4gm" path="res://escenas/battle_scene/curar.gd" id="18_f18cf"]
+[ext_resource type="Script" uid="uid://dteyrrepce8bt" path="res://escenas/battle_scene/huir.gd" id="19_v1eud"]
+[ext_resource type="AudioStream" uid="uid://r4nwd18u6otl" path="res://assets/audio/snd_snowgrave.ogg" id="23_crlsk"]
+[ext_resource type="AudioStream" uid="uid://vjgg7h0b2bfr" path="res://assets/audio/Toby Fox - Chaos King.mp3" id="23_j05l8"]
+[ext_resource type="AudioStream" uid="uid://cfa62rw32sskv" path="res://assets/audio/snd_damage_bc.wav" id="24_crkct"]
+[ext_resource type="AudioStream" uid="uid://blawcv7s4cxe6" path="res://assets/audio/snd_escaped.wav" id="25_j05l8"]
+[ext_resource type="AudioStream" uid="uid://cotfm38tewfk1" path="res://assets/audio/snd_pacify.wav" id="26_crkct"]
+[ext_resource type="AudioStream" uid="uid://bu3raxwnka0o6" path="res://assets/audio/explosion.mp3" id="28_ls66c"]
+[ext_resource type="AudioStream" uid="uid://dvb5vohy5j5g8" path="res://assets/audio/snd_menumove.wav" id="29_dky8a"]
+[ext_resource type="AudioStream" uid="uid://cuvwtemf4syig" path="res://assets/audio/snd_select.wav" id="30_qqyyo"]
+[ext_resource type="AudioStream" uid="uid://cme8u4mdbtrpr" path="res://assets/audio/snd_moss_fanfare.wav" id="31_qqyyo"]
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_uj4fr"]
 load_path = "res://.godot/imported/redMeter00.png-9d751603685fef2f4ba19896cd62a7fd.ctex"
@@ -78,25 +101,25 @@ offset_bottom = 34.0
 theme = ExtResource("2_v2k3q")
 text = "Enemigo "
 
-[node name="VidaEnemigo" type="Label" parent="CanvasLayer/InfoEnemigo" unique_id=1679680055]
-layout_mode = 0
-offset_left = -206.0
-offset_top = 35.0
-offset_right = -165.0
-offset_bottom = 69.0
-theme = ExtResource("2_v2k3q")
-theme_override_font_sizes/font_size = 16
-text = "100"
-
 [node name="BarraVidaEnemigo" type="TextureRect" parent="CanvasLayer/InfoEnemigo" unique_id=2049397195]
 layout_mode = 0
-offset_left = -273.0
-offset_top = 39.0
-offset_right = -209.0
-offset_bottom = 55.0
+offset_left = -285.0
+offset_top = 36.0
+offset_right = -185.0
+offset_bottom = 61.0
 texture = SubResource("CompressedTexture2D_uj4fr")
 script = ExtResource("1_kvxdm")
 imagenes = Array[Texture2D]([ExtResource("3_m4odr"), SubResource("CompressedTexture2D_5iewm"), SubResource("CompressedTexture2D_fghh1"), SubResource("CompressedTexture2D_v2k3q"), SubResource("CompressedTexture2D_l2ad5"), SubResource("CompressedTexture2D_1wtas"), SubResource("CompressedTexture2D_yi5mi"), SubResource("CompressedTexture2D_wanqa"), SubResource("CompressedTexture2D_esnwo"), SubResource("CompressedTexture2D_ue3hc"), SubResource("CompressedTexture2D_j4qfa")])
+
+[node name="VidaEnemigo" type="Label" parent="CanvasLayer/InfoEnemigo" unique_id=1679680055]
+layout_mode = 0
+offset_left = -179.0
+offset_top = 36.0
+offset_right = -138.0
+offset_bottom = 70.0
+theme = ExtResource("2_v2k3q")
+theme_override_font_sizes/font_size = 16
+text = "100"
 
 [node name="InfoJugador" type="Control" parent="CanvasLayer" unique_id=1836091698]
 layout_mode = 3
@@ -129,20 +152,20 @@ text = "Jugador
 
 [node name="BarraVidaJugador" type="TextureRect" parent="CanvasLayer/InfoJugador" unique_id=1376512301]
 layout_mode = 0
-offset_left = 9.0
-offset_top = 21.0
-offset_right = 73.0
-offset_bottom = 37.0
+offset_left = 10.0
+offset_top = 16.0
+offset_right = 110.0
+offset_bottom = 41.0
 texture = SubResource("CompressedTexture2D_uj4fr")
 script = ExtResource("1_kvxdm")
-imagenes = Array[Texture2D]([ExtResource("3_m4odr"), SubResource("CompressedTexture2D_5iewm"), SubResource("CompressedTexture2D_fghh1"), SubResource("CompressedTexture2D_v2k3q"), SubResource("CompressedTexture2D_l2ad5"), SubResource("CompressedTexture2D_1wtas"), SubResource("CompressedTexture2D_yi5mi"), SubResource("CompressedTexture2D_wanqa"), SubResource("CompressedTexture2D_esnwo"), SubResource("CompressedTexture2D_ue3hc"), SubResource("CompressedTexture2D_j4qfa")])
+imagenes = Array[Texture2D]([ExtResource("5_qwupt"), ExtResource("6_sa8g4"), ExtResource("7_f18cf"), ExtResource("8_v1eud"), ExtResource("9_gyqqb"), ExtResource("10_wne1l"), ExtResource("11_crlsk"), ExtResource("12_crkct"), ExtResource("13_j05l8"), ExtResource("14_ls66c"), ExtResource("15_d23fb")])
 
 [node name="VidaJugador" type="Label" parent="CanvasLayer/InfoJugador" unique_id=1427167423]
 layout_mode = 0
-offset_left = 79.0
-offset_top = 16.0
-offset_right = 120.0
-offset_bottom = 50.0
+offset_left = 116.0
+offset_top = 15.0
+offset_right = 157.0
+offset_bottom = 49.0
 theme = ExtResource("2_v2k3q")
 theme_override_font_sizes/font_size = 16
 text = "100"
@@ -170,10 +193,10 @@ color = Color(1, 0.81960785, 0.6156863, 1)
 
 [node name="TextoBatalla" type="Label" parent="CanvasLayer/CajaInferior" unique_id=1705128488]
 layout_mode = 0
-offset_left = 47.0
-offset_top = 563.0
-offset_right = 367.0
-offset_bottom = 644.0
+offset_left = 18.0
+offset_top = 552.0
+offset_right = 782.0
+offset_bottom = 633.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 28
 text = "Pikachu uso rasho laser
@@ -185,9 +208,9 @@ anchor_left = 1.0
 anchor_top = 1.0
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = -306.0
+offset_left = -304.0
 offset_top = -113.0
-offset_right = -5.0
+offset_bottom = -1.0
 grow_horizontal = 0
 grow_vertical = 0
 columns = 2
@@ -195,26 +218,27 @@ columns = 2
 [node name="Ataque1" type="Button" parent="CanvasLayer/GridContainer" unique_id=431961180]
 layout_mode = 2
 theme_override_font_sizes/font_size = 32
-text = "Ataque 1"
+text = "Placaje"
 script = ExtResource("14_esnwo")
 
 [node name="Ataque2" type="Button" parent="CanvasLayer/GridContainer" unique_id=680406595]
 layout_mode = 2
 theme_override_font_sizes/font_size = 32
-text = "Ataque 2
-"
+text = "Hiperrayo"
+script = ExtResource("17_sa8g4")
 
-[node name="Ataque3" type="Button" parent="CanvasLayer/GridContainer" unique_id=1326460097]
+[node name="Curar" type="Button" parent="CanvasLayer/GridContainer" unique_id=1326460097]
 layout_mode = 2
 theme_override_font_sizes/font_size = 32
-text = "Ataque 3
+text = "Curar
 "
+script = ExtResource("18_f18cf")
 
-[node name="Ataque4" type="Button" parent="CanvasLayer/GridContainer" unique_id=2097481638]
+[node name="Huir" type="Button" parent="CanvasLayer/GridContainer" unique_id=2097481638]
 layout_mode = 2
 theme_override_font_sizes/font_size = 32
-text = "Ataque 4
-"
+text = "Huir"
+script = ExtResource("19_v1eud")
 
 [node name="Jugador" parent="." unique_id=906077538 instance=ExtResource("5_uj4fr")]
 position = Vector2(236, 436)
@@ -227,3 +251,41 @@ z_index = -4
 scale = Vector2(4.775, 4.732)
 texture = ExtResource("7_5iewm")
 centered = false
+
+[node name="Audio" type="Node" parent="." unique_id=1511236141]
+
+[node name="MusicaFondo" type="AudioStreamPlayer" parent="Audio" unique_id=148706751]
+stream = ExtResource("23_j05l8")
+volume_db = -25.0
+pitch_scale = 1.1
+autoplay = true
+
+[node name="SonidoAtaqueCritico" type="AudioStreamPlayer" parent="Audio" unique_id=417737076]
+stream = ExtResource("23_crlsk")
+volume_db = -11.664
+
+[node name="SonidoAtaque" type="AudioStreamPlayer" parent="Audio" unique_id=876711877]
+stream = ExtResource("24_crkct")
+volume_db = -6.804
+
+[node name="SndEscaped" type="AudioStreamPlayer" parent="Audio" unique_id=523107988]
+stream = ExtResource("25_j05l8")
+
+[node name="SndPacify" type="AudioStreamPlayer" parent="Audio" unique_id=476532322]
+stream = ExtResource("26_crkct")
+
+[node name="Explosion" type="AudioStreamPlayer" parent="Audio" unique_id=1674219086]
+stream = ExtResource("28_ls66c")
+volume_db = -17.495
+
+[node name="SndHover" type="AudioStreamPlayer" parent="Audio" unique_id=132121297]
+stream = ExtResource("29_dky8a")
+volume_db = -7.776
+
+[node name="SndSelect" type="AudioStreamPlayer" parent="Audio" unique_id=502657253]
+stream = ExtResource("30_qqyyo")
+volume_db = -6.804
+
+[node name="SndWin" type="AudioStreamPlayer" parent="Audio" unique_id=410535789]
+stream = ExtResource("31_qqyyo")
+volume_db = -8.748

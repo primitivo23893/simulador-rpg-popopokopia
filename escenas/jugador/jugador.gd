@@ -2,6 +2,7 @@ class_name Jugador
 extends Node2D
 
 @onready var sprite = $Pokomon
+@onready var particulas_golpe = $ParticulasGolpe
 
 
 var nombres_pokemon = [
@@ -47,7 +48,6 @@ func generar_equipo(cantidad: int):
 		equipo_jugador.append({
 			"nombre": nombres_pokemon[poke_id],
 			"frame_reposo": frame_base,
-			"frame_ataque": frame_base + 30 # +30 frmases para ir a la fila de abajo
 		})
 		print(equipo_jugador)
 		
@@ -55,6 +55,10 @@ func cargar_siguiente_pokemon() -> bool:
 	if equipo_jugador.size() > 0:
 		pokemon_actual = equipo_jugador.pop_front()
 		sprite.frame = pokemon_actual["frame_reposo"]
+		
+		sprite.visible = true 
+		$AnimacionMuerte.visible = false 
+		
 		pokemon_cambiado.emit(pokemon_actual["nombre"])
 		return true
 	else:
@@ -63,6 +67,15 @@ func cargar_siguiente_pokemon() -> bool:
 		return false
 
 func ejecutar_animacion_ataque():
-	sprite.frame = pokemon_actual["frame_ataque"]
-	await get_tree().create_timer(0.5).timeout 
-	sprite.frame = pokemon_actual["frame_reposo"]
+	pass
+
+func recibir_golpe():
+	if particulas_golpe:
+		particulas_golpe.emitting = true
+
+func ejecutar_animacion_muerte():
+	sprite.visible = false 
+
+	var anim = $AnimacionMuerte
+	anim.visible = true 
+	anim.play(&"explosion") 

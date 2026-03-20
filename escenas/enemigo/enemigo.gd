@@ -2,7 +2,7 @@ extends Node2D
 class_name Enemigo
 
 @onready var sprite = $Pokomon
-
+@onready var particulas_golpe = $ParticulasGolpe
 
 var nombres_pokemon = [
 	"Bulbasaur", "Ivysaur", "Venusaur", "Charmander", "Charmeleon", 
@@ -56,6 +56,11 @@ func cargar_siguiente_pokemon() -> bool:
 		pokemon_actual = equipo_enemigo.pop_front()
 		sprite.frame = pokemon_actual["frame_reposo"]
 		pokemon_cambiado.emit(pokemon_actual["nombre"])
+		
+		sprite.visible = true 
+		if has_node("AnimacionMuerte"):
+			$AnimacionMuerte.visible = false
+		
 		return true
 	else:
 		equipo_derrotado.emit()
@@ -66,3 +71,15 @@ func ejecutar_animacion_ataque():
 	sprite.frame = pokemon_actual["frame_ataque"]
 	await get_tree().create_timer(0.5).timeout 
 	sprite.frame = pokemon_actual["frame_reposo"]
+	
+func recibir_golpe():
+	if particulas_golpe:
+		particulas_golpe.emitting = true
+
+
+func ejecutar_animacion_muerte():
+	sprite.visible = false 
+	
+	var anim = $AnimacionMuerte
+	anim.visible = true 
+	anim.play(&"explosion") 

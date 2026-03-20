@@ -16,7 +16,7 @@ compatibility/default_parent_skeleton_in_mesh_instance_3d=true
 
 config/name="Pokomon Popopokopia"
 config/description="Un simulador estratégico de combates por turnos inspirado en los clásicos de GameBoy. Gestiona tus ataques, calcula el daño y vacía la barra de salud de tu rival antes de que él lo haga contigo. Este prototipo demuestra la implementación de máquinas de estados, control de interfaces (UI) y bucles de gameplay en 2D."
-config/version="0.1.0"
+config/version="0.2.1"
 run/main_scene="uid://k3xq1i8egr2i"
 config/features=PackedStringArray("4.6", "GL Compatibility")
 config/icon="res://icon.svg"
