@@ -9,7 +9,6 @@ func _ready() -> void:
 
 func _accion():
 	battle._on_boton_curar_pressed()
-	$"../../../Audio/SndPacify".play()
 
 func _hover():
 	battle._reproducir_sonido_hover()

@@ -3,7 +3,6 @@
 [ext_resource type="Script" uid="uid://dfjicyj4ng5xx" path="res://escenas/battle_scene/barra_vida_enemigo.gd" id="1_kvxdm"]
 [ext_resource type="Script" uid="uid://cr4ry80c8gf0n" path="res://escenas/battle_scene/battle_scene.gd" id="1_wanqa"]
 [ext_resource type="Theme" uid="uid://cgabvpd2vhv1k" path="res://temas/Combate.tres" id="2_v2k3q"]
-[ext_resource type="Texture2D" uid="uid://c6eeqnc25v5lm" path="res://assets/pixelAssetJam2024/basicMeters 64x8/emptyBasicMeter1.png" id="3_m4odr"]
 [ext_resource type="Texture2D" uid="uid://b8qdh7mfs5t4d" path="res://assets/pixelAssetJam2024/emptyBasicBarThick.png" id="5_qwupt"]
 [ext_resource type="PackedScene" uid="uid://byffvli742s18" path="res://escenas/jugador/jugador.tscn" id="5_uj4fr"]
 [ext_resource type="Texture2D" uid="uid://wbbmewq0o8hk" path="res://assets/pixelAssetJam2024/redMeter01.png" id="6_sa8g4"]
@@ -34,36 +33,6 @@
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_uj4fr"]
 load_path = "res://.godot/imported/redMeter00.png-9d751603685fef2f4ba19896cd62a7fd.ctex"
-
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_5iewm"]
-load_path = "res://.godot/imported/redMeter01.png-9977eab0d7c26b57928d81091abb34f5.ctex"
-
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_fghh1"]
-load_path = "res://.godot/imported/redMeter02.png-a242f9d8db8b574adb77134df56872b1.ctex"
-
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_v2k3q"]
-load_path = "res://.godot/imported/redMeter03.png-12b969b16f1af1c4e0c66770c27c4db1.ctex"
-
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_l2ad5"]
-load_path = "res://.godot/imported/redMeter04.png-e228aecc6d462de952b98fe2950ed100.ctex"
-
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_1wtas"]
-load_path = "res://.godot/imported/redMeter05.png-b8079bae355e7c5bc75c9427762efdf0.ctex"
-
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_yi5mi"]
-load_path = "res://.godot/imported/redMeter06.png-4d859365b2f24103ff44886e3e4bb6d0.ctex"
-
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_wanqa"]
-load_path = "res://.godot/imported/redMeter07.png-772d2b3cf6628c37bb131f513d624fcf.ctex"
-
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_esnwo"]
-load_path = "res://.godot/imported/redMeter08.png-27f0a121eb9c38c520da31da87d86bff.ctex"
-
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_ue3hc"]
-load_path = "res://.godot/imported/redMeter09.png-1a27ca7ac0fa5d419f2fa0d3e4302106.ctex"
-
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_j4qfa"]
-load_path = "res://.godot/imported/redMeter10.png-934808d37c5a84a5b0a0ecf7726309ac.ctex"
 
 [node name="BattleScene" type="Control" unique_id=1042639583]
 layout_mode = 3
@@ -101,15 +70,15 @@ offset_bottom = 34.0
 theme = ExtResource("2_v2k3q")
 text = "Enemigo "
 
-[node name="BarraVidaEnemigo" type="TextureRect" parent="CanvasLayer/InfoEnemigo" unique_id=2049397195]
+[node name="BarraVidaEnemigor" type="TextureRect" parent="CanvasLayer/InfoEnemigo" unique_id=2130145150]
 layout_mode = 0
-offset_left = -285.0
-offset_top = 36.0
-offset_right = -185.0
-offset_bottom = 61.0
+offset_left = 10.0
+offset_top = 16.0
+offset_right = 110.0
+offset_bottom = 41.0
 texture = SubResource("CompressedTexture2D_uj4fr")
 script = ExtResource("1_kvxdm")
-imagenes = Array[Texture2D]([ExtResource("3_m4odr"), SubResource("CompressedTexture2D_5iewm"), SubResource("CompressedTexture2D_fghh1"), SubResource("CompressedTexture2D_v2k3q"), SubResource("CompressedTexture2D_l2ad5"), SubResource("CompressedTexture2D_1wtas"), SubResource("CompressedTexture2D_yi5mi"), SubResource("CompressedTexture2D_wanqa"), SubResource("CompressedTexture2D_esnwo"), SubResource("CompressedTexture2D_ue3hc"), SubResource("CompressedTexture2D_j4qfa")])
+imagenes = Array[Texture2D]([ExtResource("5_qwupt"), ExtResource("6_sa8g4"), ExtResource("7_f18cf"), ExtResource("8_v1eud"), ExtResource("9_gyqqb"), ExtResource("10_wne1l"), ExtResource("11_crlsk"), ExtResource("12_crkct"), ExtResource("13_j05l8"), ExtResource("14_ls66c"), ExtResource("15_d23fb")])
 
 [node name="VidaEnemigo" type="Label" parent="CanvasLayer/InfoEnemigo" unique_id=1679680055]
 layout_mode = 0
