@@ -72,10 +72,10 @@ text = "Enemigo "
 
 [node name="BarraVidaEnemigor" type="TextureRect" parent="CanvasLayer/InfoEnemigo" unique_id=2130145150]
 layout_mode = 0
-offset_left = 10.0
-offset_top = 16.0
-offset_right = 110.0
-offset_bottom = 41.0
+offset_left = -287.0
+offset_top = 36.0
+offset_right = -187.0
+offset_bottom = 61.0
 texture = SubResource("CompressedTexture2D_uj4fr")
 script = ExtResource("1_kvxdm")
 imagenes = Array[Texture2D]([ExtResource("5_qwupt"), ExtResource("6_sa8g4"), ExtResource("7_f18cf"), ExtResource("8_v1eud"), ExtResource("9_gyqqb"), ExtResource("10_wne1l"), ExtResource("11_crlsk"), ExtResource("12_crkct"), ExtResource("13_j05l8"), ExtResource("14_ls66c"), ExtResource("15_d23fb")])
@@ -217,7 +217,7 @@ position = Vector2(841, 205)
 
 [node name="Fondo" type="Sprite2D" parent="." unique_id=303581315]
 z_index = -4
-scale = Vector2(4.775, 4.732)
+scale = Vector2(4.799999, 4.732)
 texture = ExtResource("7_5iewm")
 centered = false
 
@@ -239,9 +239,11 @@ volume_db = -6.804
 
 [node name="SndEscaped" type="AudioStreamPlayer" parent="Audio" unique_id=523107988]
 stream = ExtResource("25_j05l8")
+volume_db = -6.0
 
 [node name="SndPacify" type="AudioStreamPlayer" parent="Audio" unique_id=476532322]
 stream = ExtResource("26_crkct")
+volume_db = -6.0
 
 [node name="Explosion" type="AudioStreamPlayer" parent="Audio" unique_id=1674219086]
 stream = ExtResource("28_ls66c")

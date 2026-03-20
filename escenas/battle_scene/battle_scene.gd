@@ -7,7 +7,7 @@ var vida_enemigo: float = 100.0
 var vida_jugador: float = 100.0
 var batalla_terminada: bool = false
 
-@onready var barra_enemigo = $CanvasLayer/InfoEnemigo/BarraVidaEnemigo 
+@onready var barra_enemigo = $CanvasLayer/InfoEnemigo/BarraVidaEnemigor
 @onready var label_enemigo = $CanvasLayer/InfoEnemigo/Enemigo
 @onready var label_vida_enemigo =  $CanvasLayer/InfoEnemigo/VidaEnemigo
 
